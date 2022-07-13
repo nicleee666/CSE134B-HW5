@@ -6,21 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Zhuoran Li's Portfolio</title>
-    <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
 
     <style>
-        .internalExample {
-            background-color: yellow;
-            font-style: italic;
-        }
-        
         code {
-            font-family: Consolas, "courier new";
             color: crimson;
             background-color: #f1f1f1;
-            padding: 2px;
-            font-size: 105%;
+        }
+        
+        .myDiv {
+            border: 5px outset rgb(0, 0, 0);
+            background-color: rgb(255, 255, 255);
+            text-align: center;
         }
     </style>
 </head>
@@ -41,21 +38,36 @@
 
 
     <main>
+        <div class="myDiv">
+            <h1>Zhuoran Li's Portfolio</h1>
+            <h2>Hi! I'm Nick!</h2>
+        </div>
+        <section>
+            <h3><em>Who am I?</em></h3>
+            <picture>
+                <source media="(min-width:650px)" srcset="img/6110WZf33tL._SL1200_.jpg">
+                <img src="img/6110WZf33tL._SL1200_.jpg" alt="pic" width="330" height="200">
 
-        <h1>Zhuoran Li's Portfolio</h1>
-        <h2 style="text-align:left">Hi! I'm Nick!</h2>
-        <picture>
-            <source media="(min-width:650px)" srcset="img/6110WZf33tL._SL1200_.jpg">
-            <img src="img/6110WZf33tL._SL1200_.jpg" alt="pic" width="330" height="200">
+
+            </picture>
 
 
-        </picture>
+            <p>
+                Hi! My name is <strong>Nick Zhuoran Li </strong> ,<br> I'm a <code>fourth year</code> undergraduate student in UCSD majoring in <b>Computer Science and Engineering</b> .
+                <br> I'm interested in both <code>backend and frontend</code> devloping and I'm wishing to pursue a carrer as <b>SWE</b>!
+            </p>
 
-        <h3>Who am I?</h3>
-        <p>
-            Hi! My name is <strong>Nick Zhuoran Li </strong> , I'm a <code>fourth year</code>undergraduate student in UCSD majoring in <b>Computer Science and Engineering</b> .
-        </p>
+            <hr>
+
+        </section>
+
+
     </main>
+
+    <footer>
+        <p><span style="color:grey">author: </span><i>Nick Li</i> <br>
+            <a href="z1li@ucsd.edu">z1li@ucsd.edu</a></p>
+    </footer>
 
 </body>
 
