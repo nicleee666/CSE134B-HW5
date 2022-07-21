@@ -2,6 +2,10 @@
 
 @font-face {
     font-family: 'Rubik Moonrocks';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/rubikmoonrocks/v2/845ANMAmAI2VUZMLu_W0M7HqlDHnXQ.ttf) format('truetype');
 }
 
 * {
@@ -284,7 +288,7 @@ a.buttonMain:hover {
         display: none;
     }
     #foot {
-        margin-top: 95%%;
+        margin-top: 95%;
     }
 }
 
