@@ -126,7 +126,7 @@ h1 {
     margin-right: auto;
     position: relative;
     font-size: 4vw;
-    font-family: 'Rubik Moonrocks';
+    font-family: 'Rubik Moonrocks', 'sans-serif';
 }
 
 
@@ -252,16 +252,39 @@ a.buttonMain:hover {
 
 @media only screen and (max-width:400px) {
     .mainPage img {
-        display: none;
+        position: absolute;
+        margin-left: 30%;
+        margin-top: 0%;
     }
-    .mainPage pre {
+    .mainPage p {
         font-size: medium;
-        margin-top: 10%;
-        margin-left: 0%;
+        align-items: center;
+        margin-top: 20%;
     }
     a.buttonMain {
-        size: 20vw;
-        margin-top: 13%;
+        display: none;
+    }
+    #foot {
+        margin-bottom: 0%;
+    }
+}
+
+@media only screen and (max-width:850px) {
+    .mainPage img {
+        position: absolute;
+        margin-left: 40%;
+        margin-top: 0%;
+    }
+    .mainPage p {
+        font-size: medium;
+        align-items: center;
+        margin-top: 30%;
+    }
+    a.buttonMain {
+        display: none;
+    }
+    #foot {
+        margin-top: 80%;
     }
 }
 
@@ -270,5 +293,5 @@ a.buttonMain:hover {
 
 #foot {
     font-size: smaller;
-    margin-left: 85%;
+    margin-left: 75%;
 }
