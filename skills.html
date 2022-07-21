@@ -5,32 +5,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Skills Page</title>
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <title>Skill Page</title>
+    <link rel="icon" href="img/1096028.png" type="image/png">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+
+    <style>
+        h2 {
+            display: flex;
+            margin-left: 10%;
+        }
+        
+        ul {
+            margin-left: 10%;
+        }
+        
+        a {
+            margin-left: 10%;
+        }
+    </style>
 
 </head>
 
 <body>
+    <header>
+        <!--nav bar-->
+        <h1 id="navheader4">Skills</h1>
+        <nav class="navbar1">
+            <ul class="navbar" id="navbar">
+                <li><a href="index.html">Main</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+
+                <a class="close" href="#">
+                    <img src="img/close.svg" alt="close">
+                </a>
+
+            </ul>
+            <a class="hamburger" href="#navbar">
+                <img src="img/hamburger-menu.svg" alt="menu">
+            </a>
+        </nav>
+    </header>
+
     <form>
-        <input type="button" value="Go back!" onclick="history.back()">
+        <input type="button" value="Go back!" class="backBut" onclick="history.back()">
     </form>
 
-    <h2>Coding Skillset</h2>
-    <ol>
+
+
+    <h2>Languages I use</h2>
+    <ul>
         <li>Java</li>
         <li>C</li>
         <li>C++</li>
         <li>python</li>
         <li>HTML</li>
         <li>Andriod Studio</li>
-    </ol>
+    </ul>
+
+    <br>
+
 
     <h2>Prior projects</h2>
-    <a href="https://github.com/CSE-110-Winter-2022/birds-of-a-feather-team-14"> Birds of a feather</a>
     <br>
+    <a href="https://github.com/CSE-110-Winter-2022/birds-of-a-feather-team-14"> Birds of a feather</a>
+    <br><br>
     <a href="https://github.com/nickkro25/cse112_team15">PomoTimer</a>
 
 
+
+
+
+
 </body>
+<hr>
+<footer>
+    <p id="foot"><span style="color:grey ">author: </span><i>Nick Li</i>
+        <a href="z1li@ucsd.edu ">z1li@ucsd.edu</a></p>
+</footer>
 
 </html>

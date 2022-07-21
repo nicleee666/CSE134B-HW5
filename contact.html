@@ -6,28 +6,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Contact Page</title>
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/1096028.png" type="image/png">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+
+    <style>
+        .message {
+            display: flex;
+            margin-left: 20%;
+        }
+        
+        h2,
+        h3,
+        p,
+        a {
+            display: flex;
+            margin-left: 20%;
+        }
+    </style>
 
 </head>
 
 <body>
+    <header>
+        <!--nav bar-->
+
+        <h1 id="navheader3">Contact</h1>
+        <nav class="navbar1">
+            <ul class="navbar" id="navbar">
+                <li><a href="index.html">Main</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+
+                <a class="close" href="#">
+                    <img src="img/close.svg" alt="close">
+                </a>
+
+            </ul>
+            <a class="hamburger" href="#navbar">
+                <img src="img/hamburger-menu.svg" alt="menu">
+            </a>
+        </nav>
+    </header>
+
+    <!--goback button-->
     <form>
-        <input type="button" value="Go back!" onclick="history.back()">
+        <input type="button" value="Go back!" class="backBut" onclick="history.back()">
     </form>
-    <h1>How to contact me</h1>
-    <details>
-        <summary><b>Contact Info</b></summary>
-        <p>
-            email: z1li at ucsd dot edu <br> phone: (818)2845715 <br> just holla Nick and hope for the best
-        </p>
-    </details>
 
-    <hr>
 
-    <form action="/action_page.php">
+
+
+    <h3>Contact Info</h3>
+    <a href="z1li@ucsd.edu">z1li@ucsd.edu</a>
+    <p>
+        phone: (818)2845715
+    </p>
+
+    <br><br>
+
+
+
+
+    <form class="message" action="/action_page.php">
         <fieldset>
-            <legend>Leave your message:</legend>
-            <label for="name">name:</label>
+            <h3>Leave your message:</h3>
+            <label for="name">Name:</label>
             <input type="text" id="name" name="name"><br><br>
             <label for="email">Email:</label>
             <input type="email" id="email" name="email"><br><br>
@@ -37,20 +84,16 @@
         </fieldset>
     </form>
 
-    <form action="/action_page.php" method="get">
-        <label for="occupations">Choose your occupation from the list:</label>
-        <input list="occupation" name="occupation" id="occupation">
-        <datalist id="occupation">
-            <option value="SWE">
-            <option value="Student">
-            <option value="Teacher">
-            <option value="Recuiter">
-        </datalist>
-        <input type="submit">
-    </form>
-
 </body>
+<br>
+<hr>
 
+
+
+<footer>
+    <p id="foot"><span style="color:grey">author: </span><i>Nick Li</i>
+        <a href="z1li@ucsd.edu">z1li@ucsd.edu</a></p>
+</footer>
 
 
 

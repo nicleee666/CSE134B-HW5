@@ -6,69 +6,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Zhuoran Li's Portfolio</title>
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/1096028.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap" rel="stylesheet">
 
-    <style>
-        code {
-            color: crimson;
-            background-color: #f1f1f1;
-        }
-        
-        .myDiv {
-            border: 5px outset rgb(0, 0, 0);
-            background-color: rgb(255, 255, 255);
-            text-align: center;
-        }
-    </style>
 </head>
 
 <body>
     <header>
         <!--nav bar-->
-        <nav>
-            <ul>
+        <div id="mydiv"> </div>
+        <h1 id="navHeader">Zhuoran Li's Portfolio</h1>
+
+        <nav class="navbar1">
+            <ul class="navbar" id="navbar">
+                <li><a href="index.html">Main</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="skills.html">Skills</a></li>
                 <li><a href="contact.html">Contact Me</a></li>
-                <li><a href="experiment.html">Experiments</a></li>
+
+                <a class="close" href="#">
+                    <img src="img/close.svg" alt="close">
+                </a>
 
             </ul>
+            <a class="hamburger" href="#navbar">
+                <img src="img/hamburger-menu.svg" alt="menu">
+            </a>
         </nav>
+
+
     </header>
 
 
     <main>
-        <div class="myDiv">
-            <h1>Zhuoran Li's Portfolio</h1>
-            <h2>Hi! I'm Nick!</h2>
+
+
+        <div class="mainPage">
+            <p>Hi, I'm Nick Li! <br><b>I'm a software engineer, I can help <br>you with your computer stuff!</b></p>
+            <a href="about.html" class="buttonMain">More about me</a>
+
+
+            <img src="img/swe.png" alt="swe" class="swe">
+
+
         </div>
-        <section>
-            <h3><em>Who am I?</em></h3>
-            <picture>
-                <source media="(min-width:650px)" srcset="img/6110WZf33tL._SL1200_.jpg">
-                <img src="img/6110WZf33tL._SL1200_.jpg" alt="pic" width="330" height="200">
 
 
-            </picture>
 
 
-            <p>
-                Hi! My name is <strong>Nick Zhuoran Li </strong> ,<br> I'm a <code>fourth year</code> undergraduate student in UCSD majoring in <b>Computer Science and Engineering</b> .
-                <br> I'm interested in both <code>backend and frontend</code> devloping and I'm wishing to pursue a carrer as <b>SWE</b>!
-            </p>
 
-            <hr>
 
-        </section>
+
+
 
 
     </main>
 
-    <footer>
-        <p><span style="color:grey">author: </span><i>Nick Li</i> <br>
-            <a href="z1li@ucsd.edu">z1li@ucsd.edu</a></p>
-    </footer>
+
 
 </body>
+<hr>
+<footer>
+    <p id="foot"><span style="color:grey">author: </span><i>Nick Li</i>
+        <a href="z1li@ucsd.edu">z1li@ucsd.edu</a></p>
+</footer>
+
 
 </html>
