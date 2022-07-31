@@ -1,6 +1,7 @@
 class ButtonCount extends HTMLElement {
     constructor() {
         super();
+        
 
         let btn = document.createElement('button');
         btn.innerHTML = 'Times Clicked : ';
@@ -11,17 +12,15 @@ class ButtonCount extends HTMLElement {
 
         btn.append(count);
 
-            // add the slot in
         let slot = document.createElement('slot');
         btn.append(slot);
 
-            // Update the count when the button is clicked
         btn.addEventListener('click', () => {
             let currVal = Number(count.textContent);
             count.textContent = currVal + 1;
         });
 
-        // Attach and open up shadow tree and add the button to it
+    
         this.attachShadow({ mode: 'open' });
         this.shadowRoot.append(btn);
     }

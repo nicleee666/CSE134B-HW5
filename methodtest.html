@@ -106,12 +106,12 @@
             let form = document.getElementById('myform');
             let method = "get";
             let endpoint = "https://httpbin.org/get";
-            let payload = new FormData(form);
-
-            let request = await fetch(endpoint, {
-            method : method
             
+
+            let request =await fetch(endpoint, {
+            method : method   
         });
+
         var jsonPretty = JSON.stringify(JSON.parse(await request.text()),null,2);
         document.getElementById('response').innerHTML = jsonPretty;
     }
