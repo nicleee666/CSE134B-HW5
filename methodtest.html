@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Method Test</title>
+    <link rel="icon" href="img/1096028.png" type="image/png">
+    <style>
+
+    </style>
+
+    
+
+</head>
+
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Main</a></li>
+            <li><a href="methodtest.html">Method Test</a></li>
+            <li><a href="webcomponent.html">Web Component</a></li>
+        </ul>
+    </nav>
+    <form action="" id="myform">
+        <label for="recId">ID: </label>
+        <input type="text" name="recId" id="recId">
+        <br>
+        <label for="article_name">Article Name: </label>
+        <input type="text" name="article_name" id="article_name">
+        <br>
+
+        <label for="article_body">Article Body: </label>
+        <textarea name="article_body" id="article_body" cols="30" rows="10"></textarea>
+        
+        <input type="hidden" name="date" id="date">
+        <br>
+
+
+        <button type="button" id="postbt">postBtn</button>
+        <button type="button" id="putbt">putBtn</button>
+        <button type="button" id="getbt">getBtn</button>
+        <button type="button" id="delbt">deleteBtn</button>
+    
+        <br>
+
+        <fieldset>
+            <legend>HTTP Response</legend>
+    
+                <pre id="response"></pre>
+    
+            </fieldset>
+    </form>
+
+
+    <script type="module">
+        window.addEventListener('DOMContentLoaded',init);
+
+        function init(){
+            document.getElementById('postbt').addEventListener('click', postSend);
+            document.getElementById('putbt').addEventListener('click', putSend);
+            document.getElementById('getbt').addEventListener('click', getSend);
+            document.getElementById('delbt').addEventListener('click', delSend);
+            const date1 = document.getElementById('date');
+            date1.value = new Date();
+            console.log(`Initialized at ${new Date()}`);
+        }
+
+        async function postSend(){
+            console.log(`Entering postSend`);
+            let form = document.getElementById('myform');
+            let method = "post";
+            let endpoint = "https://httpbin.org/post";
+            let payload = new FormData(form);
+
+            let request = await fetch(endpoint, {
+            method : method,
+            body : payload
+        });
+
+        var jsonPretty = JSON.stringify(JSON.parse(await request.text()),null,2);
+        document.getElementById('response').innerHTML = jsonPretty;
+    }
+
+    async function putSend(){
+            console.log(`Entering putSend`);
+            let form = document.getElementById('myform');
+            let method = "put";
+            let endpoint = "https://httpbin.org/put";
+            let payload = new FormData(form);
+
+            let request = await fetch(endpoint, {
+            method : method,
+            body : payload
+        });
+
+        var jsonPretty = JSON.stringify(JSON.parse(await request.text()),null,2);
+        document.getElementById('response').innerHTML = jsonPretty;
+    }
+
+
+    async function getSend(){
+            console.log(`Entering getSend`);
+            let form = document.getElementById('myform');
+            let method = "get";
+            let endpoint = "https://httpbin.org/get";
+            let payload = new FormData(form);
+
+            let request = await fetch(endpoint, {
+            method : method
+            
+        });
+        var jsonPretty = JSON.stringify(JSON.parse(await request.text()),null,2);
+        document.getElementById('response').innerHTML = jsonPretty;
+    }
+
+
+    async function delSend(){
+            console.log(`Entering delSend`);
+            let form = document.getElementById('myform');
+            let method = "delete";
+            let endpoint = "https://httpbin.org/delete";
+            let payload = null;
+
+            let request = await fetch(endpoint, {
+            method : method,
+            body : payload
+        });
+        var jsonPretty = JSON.stringify(JSON.parse(await request.text()),null,2);
+        document.getElementById('response').innerHTML = jsonPretty;
+    }
+    </script>
+
+    <br>
+
+    
+
+</body>
+
+</html>
